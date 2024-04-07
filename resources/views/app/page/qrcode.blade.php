@@ -4,14 +4,14 @@
 
 @section('content')
 
-    <div class="row d-flex justify-content-center mt-5 align-items-center">
+    <div class="row d-flex justify-content-center mt-5 align-items-center border border-danger" style="height: 100vw;">
         <!--begin::Aside-->
         <img class="theme-light-show" style="width: 100vw; left: 0; top: 0;"
         src="{{ asset('files/images/header.jpeg') }}" alt="" id="img-tiket"/>
         <img class="theme-light-show d-none img-barcode" style="width: 100vw; left: 0;"
         src="{{ asset('files/images/barcode_atas.png') }}" alt=""/>
 
-        <div class="col-10 col-md-4 row d-flex justify-content-center mt-4">
+        <div class="col-10 col-md-4 row d-flex justify-content-center mt-4" id="content-qr">
             <!--end::Image-->
 
             <h1 class="text-gray-800 fs-2qx fw-bold text-center" id="peringatan">
@@ -43,6 +43,7 @@
             $('#img-tiket').toggleClass('d-none');
             $('#peringatan').toggleClass('d-none');
             $('.img-barcode').toggleClass('d-none');
+            $('#content-qr');
             window.print();
         }
     </script>
