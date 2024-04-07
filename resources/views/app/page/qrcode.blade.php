@@ -8,9 +8,13 @@
         <!--begin::Aside-->
         <img class="theme-light-show" style="width: 100vw; left: 0; top: 0;"
         src="{{ asset('files/images/header.jpeg') }}" alt="" />
-        
+
         <div class="col-10 col-md-4 row d-flex justify-content-center">
             <!--end::Image-->
+
+            <h1 class="text-gray-800 fs-2qx fw-bold text-center">
+                Saat Penukaran tiket diharapkan membawa KTP / Kartu Pelajar ASLI
+            </h1>
             <div class="d-flex justify-content-center">
                 {{$qrCode}}
             </div>
