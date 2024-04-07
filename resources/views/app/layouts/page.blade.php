@@ -60,11 +60,7 @@
         <!--begin::Page bg image-->
         <style>
             body {
-                background-image: url('{{ asset('assets/media/auth/bg10.jpeg') }}');
-            }
-
-            [data-bs-theme="dark"] body {
-                background-image: url('assets/media/auth/bg10-dark.jpeg');
+                background-color: #ffffff;
             }
         </style>
         <!--end::Page bg image-->
