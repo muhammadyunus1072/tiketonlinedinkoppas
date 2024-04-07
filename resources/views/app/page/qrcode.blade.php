@@ -9,14 +9,14 @@
     src="{{ asset('files/images/barcode_new.png') }}" alt="" />
     <div class="row d-flex justify-content-center mt-5">
         <!--begin::Aside-->
-        <div class="col-10 col-md-4 row d-flex justify-content-center" style="margin-top: 10%;">
+        <div class="col-10 col-md-4 row d-flex justify-content-center" style="margin-top: 13%;">
             <!--end::Image-->
     
             <div class="d-flex justify-content-center">
                 {{$qrCode}}
             </div>
             
-            <div class="row d-flex justify-content-center" style="margin-top: 40px;" id="footer">
+            <div class="row d-flex justify-content-center" style="margin-top: 100px;" id="footer">
                 <div class="col-md-10 d-grid">
                     <button type="button" onclick="printQR()" class="btn btn-success mt-3 btn-block">
                         <i class='ki-duotone ki-check fs-1'></i>
