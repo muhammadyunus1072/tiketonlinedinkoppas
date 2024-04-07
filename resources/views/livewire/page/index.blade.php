@@ -3,7 +3,7 @@
     
     @if (App\Repositories\Page\ConcertParticipantRepository::is_eligible())
         <div class="d-grid mb-8">
-            <a href="{{ route('register') }}" class="btn btn-primary">
+            <a href="{{ route('register') }}" class="btn" style="background-color: #00cacd">
                 <span class="indicator-label">Daftar Peserta</span>
             </a>
         </div>
@@ -28,7 +28,7 @@
         @enderror
     </div>
     <div class="d-grid mb-8">
-        <button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
+        <button type="submit" id="kt_sign_in_submit" class="btn" style="background-color: #c252a5">
             
             <span class="indicator-label">Generate</span>
             <span class="indicator-progress" wire:loading>
