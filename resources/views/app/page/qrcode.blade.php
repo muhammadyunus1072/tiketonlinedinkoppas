@@ -6,25 +6,18 @@
 
     <div class="row d-flex justify-content-center mt-5">
         <!--begin::Aside-->
-        <div class="col-10 col-md-4 row d-flex justify-content-center" style="margin-top: 20%;">
+        <div class="col-10 col-md-4 row d-flex justify-content-center">
             <!--end::Image-->
             <div class="d-flex justify-content-center">
                 {{$qrCode}}
             </div>
             
-            <div class="row d-flex justify-content-center" style="margin-top: 80%;" id="footer">
+            <div class="row d-flex justify-content-center" style="margin-top: 40px;" id="footer">
                 <div class="col-md-10 d-grid">
-                    <button type="button" onclick="printQR()" class="btn btn-success mt-3 btn-block">
+                    <button type="button" onclick="printQR()" class="btn mt-3 btn-block" style="background-color: #00cacd">
                         <i class='ki-duotone ki-check fs-1'></i>
-                        Simpan
+                        Download
                     </button>
-                    <a type="button" href="{{ route('index') }}" class="btn btn-warning text-dark mt-3 btn-block">
-                        <i class="ki-duotone ki-arrow-left fs-2 text-dark">
-                            <span class="path1"></span>
-                            <span class="path2"></span>
-                        </i>
-                        Kembali
-                    </a>
                 </div>
             </div>
         </div>
