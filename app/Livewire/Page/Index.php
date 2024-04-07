@@ -17,7 +17,7 @@ use App\Repositories\Page\ConcertParticipantRepository;
 class Index extends Component
 {
 
-    public $no_tkp;
+    public $no_ktp;
 
     public function render()
     {
@@ -34,12 +34,7 @@ class Index extends Component
             ]
         );
         try {
-
-            $validateData = [
-                'no_ktp' => $this->no_ktp,
-            ];
-
-            $user = ConcertParticipantRepository::findByNo($validateData);
+            $user = ConcertParticipantRepository::findByNo($this->no_ktp);
             if($user){
                 return redirect()->route('generate', ['id' => Crypt::encrypt($user->id)]);
             }
