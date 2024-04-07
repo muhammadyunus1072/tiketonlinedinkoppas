@@ -3,7 +3,6 @@
 @section('body-class', 'layout-default layout-login-image')
 
 @section('content')
-
     <div class="row d-flex justify-content-center align-items-center h-100">
         <!--begin::Aside-->
         <div class="col-10 col-md-4 row d-flex justify-content-center">

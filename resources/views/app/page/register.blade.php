@@ -4,20 +4,15 @@
 
 @section('content')
 
-<div class="row d-flex justify-content-center mt-5">
-    <!--begin::Aside-->
-    <div class="col-10 col-md-4 row d-flex justify-content-center">
-        <!--end::Image-->
-        <!--begin::Title-->
-        <h1 class="text-gray-800 fs-2qx fw-bold text-center">{{ config('template.title') }}</h1>
-        <!--end::Title-->
-        <!--begin::Text-->
-        <div class="text-gray-600 fs-1qx text-center fw-semibold mb-8">
-            {{ config('template.subtitle') }}
+<div class="w-100">
+    <img class="theme-light-show" style="width: 100%;"
+                    src="{{ asset('files/images/header.jpeg') }}" alt="" />
+    <div class="row d-flex justify-content-center mt-5">
+        <!--begin::Aside-->
+        <div class="col-10 col-md-4 row d-flex justify-content-center">
+            <livewire:page.register />
         </div>
-        <!--end::Text-->
-        <livewire:page.register />
+        <!--begin::Aside-->
     </div>
-    <!--begin::Aside-->
 </div>
 @endsection
