@@ -56,15 +56,10 @@
                 @enderror
             </div>
             <div class="col-md-10 d-grid">
-                <button type="submit" class="btn btn-success mt-3 btn-block">
-                    <i class='ki-duotone ki-check fs-1'></i>
+                <button type="submit" class="btn mt-3 btn-block text-white" style="background-color: #00cacd">
                     Simpan
                 </button>
-                <a type="button" href="{{ route('index') }}" class="btn btn-warning text-dark mt-3 btn-block">
-                    <i class="ki-duotone ki-arrow-left fs-2 text-dark">
-                        <span class="path1"></span>
-                        <span class="path2"></span>
-                    </i>
+                <a type="button" href="{{ route('index') }}" class="btn text-white mt-3 btn-block" style="background-color: #c252a5">
                     Kembali
                 </a>
             </div>
