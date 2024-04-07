@@ -11,7 +11,7 @@
     let scanner = new Instascan.Scanner({ 
         continuous: true,
         video: document.getElementById('preview') ,
-
+        refractoryPeriod: 30000,
     });
     scanner.addListener('scan', function (content) {
         Livewire.dispatch('on-scanned', { data: content })
