@@ -1,13 +1,11 @@
 <?php
 
-use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\AuthController;
 
 Route::middleware('guest')->group(function () {
-    Route::get('/', [AuthController::class, 'login']);
     Route::get("/login", [AuthController::class, "login"])->name("login");
     Route::get("/logout", [AuthController::class, "logout"])->name('logout');
-    Route::get("/register", [AuthController::class, "register"])->name("register");
     Route::get('/forgot-password', [AuthController::class, 'forgotPassword'])->name('password.request');
     Route::get('/reset-password/{token}',  [AuthController::class, 'resetPassword'])->name('password.reset');
     Route::get("/email_verification", [AuthController::class, "emailVerification"])->name("verification.index");

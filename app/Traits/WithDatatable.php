@@ -46,7 +46,7 @@ trait WithDatatable
     {
         $this->resetPage();
     }
-
+    
     #[On('datatable-add-filter')]
     public function datatableAddFilter($filter)
     {
@@ -54,11 +54,11 @@ trait WithDatatable
             $this->$key = $value;
         }
     }
-
+    
     #[On('datatable-refresh')]
     public function datatableRefresh()
     {
-        $this->refresh();
+        $this->resetPage();
     }
 
     public function datatablePaginate($query)

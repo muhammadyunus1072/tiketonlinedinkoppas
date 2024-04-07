@@ -1,5 +1,5 @@
 <div>
-    <div class="row justify-content-between mb-3">
+    <div class="row justify-content-between mb-3 align-items-end">
         <div class="col-auto mb-2 {{ !isset($show_filter) || $show_filter == true ? '' : 'd-none' }}">
             <label>Show</label>
             <select wire:model.change="length" class="form-select">
@@ -8,9 +8,12 @@
                 @endforeach
             </select>
         </div>
+        <div class="col-sm-4 mb-2">
+            <button class="btn btn-info" @click="$dispatch('datatable-refresh')">Refresh</button>
+        </div>
         <div class="col-sm-6 mb-2 {{ !isset($keyword_filter) || $keyword_filter == true ? '' : 'd-none' }}">
             <label>Kata Kunci</label>
-            <input wire:model.change="search" type="text" class="form-control">
+            <input wire:model.live="search" type="text" class="form-control">
         </div>
     </div>
 

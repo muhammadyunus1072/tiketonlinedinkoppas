@@ -52,5 +52,10 @@ return [
                 ],
             ],
         ],
+        [
+            'text' => 'Daftar Hadir',
+            'route'  => 'attendance.index',
+            'icon' => 'ki-duotone ki-element-11',
+        ],
     ],
 ];

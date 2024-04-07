@@ -30,11 +30,15 @@ class PermissionHelper
     const ACCESS_USER = "user";
     const ACCESS_PERMISSION = "permission";
     const ACCESS_ROLE = "role";
+    const ACCESS_SCANNER = "scanner";
+    const ACCESS_ATTENDANCE = "attendance";
     const ACCESS_ALL = [
         self::ACCESS_DASHBOARD,
         self::ACCESS_USER,
         self::ACCESS_PERMISSION,
         self::ACCESS_ROLE,
+        self::ACCESS_SCANNER,
+        self::ACCESS_ATTENDANCE,
     ];
 
     const TRANSLATE_ACCESS = [
@@ -42,6 +46,8 @@ class PermissionHelper
         self::ACCESS_USER => "Pengguna",
         self::ACCESS_PERMISSION => "Akses",
         self::ACCESS_ROLE => "Jabatan",
+        self::ACCESS_SCANNER => "Scanner",
+        self::ACCESS_ATTENDANCE => "Sistem Kehadiran",
     ];
 
 
