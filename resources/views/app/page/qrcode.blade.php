@@ -6,10 +6,10 @@
 
 <div class="w-100" style="position: relative;">
     <img class="theme-light-show" style="width: 100vw; position: absolute; left: 0; top: 0;"
-    src="{{ asset('files/images/barcode.jpeg') }}" alt="" />
+    src="{{ asset('files/images/barcode.png') }}" alt="" />
     <div class="row d-flex justify-content-center mt-5">
         <!--begin::Aside-->
-        <div class="col-10 col-md-4 row d-flex justify-content-center" style="margin-top: 300px;">
+        <div class="col-10 col-md-4 row d-flex justify-content-center" style="margin-top: 10%;">
             <!--end::Image-->
     
             <div class="d-flex justify-content-center">
