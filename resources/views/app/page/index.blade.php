@@ -13,11 +13,11 @@
             </div>
             <!--end::Image-->
             <!--begin::Title-->
-            <h1 class="text-gray-800 fs-2qx fw-bold text-center">{{ config('template.title') }}</h1>
+            <h1 class="text-gray-800 fs-2qx fw-bold text-center">DINAS KOPERASI DAN USAHA MIKRO KOTA PASURUAN</h1>
             <!--end::Title-->
             <!--begin::Text-->
             <div class="text-gray-600 fs-1qx text-center fw-semibold mb-8">
-                {{ config('template.subtitle') }}
+                OGMA ORGANIZER
             </div>
             <!--end::Text-->
             <livewire:page.index />

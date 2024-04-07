@@ -14,7 +14,7 @@ class ConcertParticipant extends Model
     const STATUS_REGISTERED = "REGISTERED";
     const STATUS_SCANNED = "SCANNED";
 
-    const MAX = 2;
+    const MAX = 2500;
 
     protected $fillable = [
         'name',
