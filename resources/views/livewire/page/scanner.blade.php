@@ -18,6 +18,7 @@
                     continuous: true,
                     video: document.getElementById('preview'),
                     refractoryPeriod: 30000,
+                    mirror: false,
                 });
 
                 scanner.addListener('scan', function (content) {
