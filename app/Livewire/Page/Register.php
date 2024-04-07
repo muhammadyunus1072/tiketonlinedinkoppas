@@ -37,7 +37,7 @@ class Register extends Component
             'email.email' => 'Email Format Tidak Sesuai',
             'no_ktp.required' => 'No KTP / Kartu Pelajar Harus Diisi',
             'no_ktp.min' => 'No KTP / Kartu Pelajar Minimal 6 karakter',
-            'no_ktp.max' => 'No KTP / Kartu Pelajar Minimal 6 karakter',
+            'no_ktp.max' => 'No KTP / Kartu Pelajar Maksimal 6 karakter',
             'no_ktp.unique' => 'No KTP / Kartu Pelajar Sudah Terdaftar',
             'no_telp.required' => 'Nomor Telephone Harus Diisi',
             'alamat.required' => 'Alamat Harus Diisi',
