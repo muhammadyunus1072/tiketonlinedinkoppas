@@ -40,7 +40,7 @@ class Register extends Component
             'no_ktp.max' => 'No KTP / Kartu Pelajar Maksimal 6 karakter',
             'no_ktp.unique' => 'No KTP / Kartu Pelajar Sudah Terdaftar',
             'no_telp.required' => 'Nomor Telephone Harus Diisi',
-            'no_telp.min' => 'Nomor Telephone Minimal 6',
+            'no_telp.min' => 'Nomor Telephone Minimal 10',
             'alamat.required' => 'Alamat Harus Diisi',
             ]
         );
