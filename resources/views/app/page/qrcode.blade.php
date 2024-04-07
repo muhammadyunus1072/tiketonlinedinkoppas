@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="row d-flex justify-content-center mt-5 align-items-center" style="height: 100vh;">
+    <div class="row d-flex justify-content-center mt-5 align-items-center" style="height: 80vh;">
         <!--begin::Aside-->
         <img class="theme-light-show" style="width: 100vw; left: 0; top: 0;"
         src="{{ asset('files/images/header.jpeg') }}" alt="" id="img-tiket"/>
