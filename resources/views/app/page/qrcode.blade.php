@@ -7,7 +7,9 @@
     <div class="row d-flex justify-content-center mt-5">
         <!--begin::Aside-->
         <img class="theme-light-show" style="width: 100vw; left: 0; top: 0;"
-        src="{{ asset('files/images/header.jpeg') }}" alt="" />
+        src="{{ asset('files/images/header.jpeg') }}" alt="" id="img-tiket"/>
+        <img class="theme-light-show d-none img-barcode" style="width: 100vw; left: 0; top: 0;"
+        src="{{ asset('files/images/barcode_atas.png') }}" alt=""/>
 
         <div class="col-10 col-md-4 row d-flex justify-content-center mt-4">
             <!--end::Image-->
@@ -27,6 +29,9 @@
                 </div>
             </div>
         </div>
+
+        <img class="theme-light-show d-none img-barcode" style="width: 100vw; left: 0;"
+        src="{{ asset('files/images/barcode_bawah.png') }}" alt=""/>
         <!--begin::Aside-->
 </div>
 @endsection
@@ -35,7 +40,9 @@
     <script>
         function printQR(){
             $('#footer').toggleClass('d-none');
+            $('#img-tiket').toggleClass('d-none');
             $('#peringatan').toggleClass('d-none');
+            $('#img-barcode').toggleClass('d-none');
             window.print();
         }
     </script>
