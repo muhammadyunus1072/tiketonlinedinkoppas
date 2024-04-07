@@ -36,7 +36,7 @@ class Scanner extends Component
                 Alert::fail($this, 'Gagal', 'Data Tidak Ditemukan');
             }
         } catch (DecryptException $e) {
-            Alert::fail($this, 'Error', 'Failed to decrypt data');
+            Alert::fail($this, 'Gagal', 'Data Tidak Ditemukan');
         }
         
     }

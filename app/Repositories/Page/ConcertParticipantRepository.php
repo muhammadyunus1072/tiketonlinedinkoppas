@@ -12,9 +12,9 @@ class ConcertParticipantRepository extends MasterDataRepository
         return ConcertParticipant::class;
     }
 
-    public static function findByEmail($email)
+    public static function findByNo($no_ktp)
     {
-        return ConcertParticipant::whereEmail($email)->first();
+        return ConcertParticipant::where('no_ktp', $no_ktp)->first();
     }
 
     public static function datatable()

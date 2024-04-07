@@ -19,9 +19,9 @@
     </div>
     <div class="fv-row mb-8">
         <!--begin::Email-->
-        <input type="text" placeholder="NIK / Kartu Pelajar" wire:model="email" autocomplete="off"
-            class="form-control bg-transparent @error('email') is-invalid @enderror" />
-        @error('email')
+        <input type="text" placeholder="NIK / Kartu Pelajar" wire:model.blur="no_ktp" autocomplete="off"
+            class="form-control bg-transparent @error('no_ktp') is-invalid @enderror" />
+        @error('no_ktp')
             <div class="invalid-feedback">
                 {{ $message }}
             </div>
