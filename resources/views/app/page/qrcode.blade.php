@@ -15,8 +15,8 @@
             <div class="row d-flex justify-content-center" style="margin-top: 40px;" id="footer">
                 <div class="col-md-10 d-grid">
                     <button type="button" onclick="printQR()" class="btn mt-3 btn-block text-white" style="background-color: #00cacd">
-                        <i class='ki-duotone ki-check fs-1'></i>
-                        Download
+                        <i class='ki-duotone ki-check fs-1 text-white'></i>
+                        DOWNLOAD
                     </button>
                 </div>
             </div>
