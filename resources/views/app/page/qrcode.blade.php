@@ -42,7 +42,7 @@
             $('#footer').toggleClass('d-none');
             $('#img-tiket').toggleClass('d-none');
             $('#peringatan').toggleClass('d-none');
-            $('#img-barcode').toggleClass('d-none');
+            $('.img-barcode').toggleClass('d-none');
             window.print();
         }
     </script>
