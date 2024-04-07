@@ -57,5 +57,10 @@ return [
             'route'  => 'attendance.index',
             'icon' => 'ki-duotone ki-element-11',
         ],
+        [
+            'text' => 'Scanner',
+            'route'  => 'scanner.index',
+            'icon' => 'ki-duotone ki-element-11',
+        ],
     ],
 ];
