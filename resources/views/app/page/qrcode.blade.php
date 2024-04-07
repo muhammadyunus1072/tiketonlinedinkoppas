@@ -9,7 +9,7 @@
     src="{{ asset('files/images/barcode.jpeg') }}" alt="" />
     <div class="row d-flex justify-content-center mt-5">
         <!--begin::Aside-->
-        <div class="col-10 col-md-4 row d-flex justify-content-center">
+        <div class="col-10 col-md-4 row d-flex justify-content-center" style="margin-top: 300px;">
             <!--end::Image-->
     
             <div class="d-flex justify-content-center">
