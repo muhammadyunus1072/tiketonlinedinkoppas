@@ -4,8 +4,8 @@
 
 @section('content')
 
-<div class="w-100">
-    <img class="theme-light-show" style="width: 100%;"
+<div class="w-100" style="position: relative;">
+    <img class="theme-light-show" style="width: 100vw; position: absolute; left: 0; top: 0;"
                     src="{{ asset('files/images/header.jpeg') }}" alt="" />
     <div class="row d-flex justify-content-center mt-5">
         <!--begin::Aside-->
