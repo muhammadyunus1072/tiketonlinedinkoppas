@@ -28,7 +28,7 @@ class Register extends Component
             'name' => 'required',
             'email' => 'required|email',
             'no_ktp' => 'required|min:6|max:18|unique:concert_participants,no_ktp',
-            'no_telp' => 'required',
+            'no_telp' => 'required|min:10',
             'alamat' => 'required',
         ],
         [
@@ -40,6 +40,7 @@ class Register extends Component
             'no_ktp.max' => 'No KTP / Kartu Pelajar Maksimal 6 karakter',
             'no_ktp.unique' => 'No KTP / Kartu Pelajar Sudah Terdaftar',
             'no_telp.required' => 'Nomor Telephone Harus Diisi',
+            'no_telp.min' => 'Nomor Telephone Minimal 6',
             'alamat.required' => 'Alamat Harus Diisi',
             ]
         );
