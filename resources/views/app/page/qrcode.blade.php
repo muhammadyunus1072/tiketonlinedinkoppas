@@ -9,10 +9,10 @@
         <img class="theme-light-show" style="width: 100vw; left: 0; top: 0;"
         src="{{ asset('files/images/header.jpeg') }}" alt="" />
 
-        <div class="col-10 col-md-4 row d-flex justify-content-center">
+        <div class="col-10 col-md-4 row d-flex justify-content-center mt-4">
             <!--end::Image-->
 
-            <h1 class="text-gray-800 fs-2qx fw-bold text-center mt-3" id="peringatan">
+            <h1 class="text-gray-800 fs-2qx fw-bold text-center" id="peringatan">
                 Saat Penukaran tiket diharapkan membawa KTP / Kartu Pelajar ASLI
             </h1>
             <div class="d-flex justify-content-center">
