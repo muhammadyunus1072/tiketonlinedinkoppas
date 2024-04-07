@@ -93,7 +93,7 @@ class Datatable extends Component
                 }
             ],
             [
-                'key' => 'Waktu Scan',
+                'key' => 'scanned_at',
                 'name' => 'Status',
                 'render' => function($item){
                     return ($item->scanned_at) ? Carbon::parse($item->scanned_at)->format('d F Y H:i:s') : "-";
