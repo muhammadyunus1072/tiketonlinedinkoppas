@@ -7,6 +7,7 @@ use App\Models\ConcertParticipant;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Crypt;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use Illuminate\Contracts\Encryption\DecryptException;
 use App\Repositories\Page\ConcertParticipantRepository;
 
 class PageController extends Controller
@@ -38,13 +39,17 @@ class PageController extends Controller
 
     public function generate($id)
     {
-        $decId = Crypt::decrypt($id);
-        $user = ConcertParticipantRepository::find($decId);
-        if($user && $user->status === ConcertParticipant::STATUS_REGISTERED){
-            $qrCode = QrCode::size(400)->generate($id);
-            return view('app.page.qrcode', compact('qrCode', 'id'));
+        try {
+            $decId = Crypt::decrypt($id);
+            $user = ConcertParticipantRepository::find($decId);
+            if($user && $user->status === ConcertParticipant::STATUS_REGISTERED){
+                $qrCode = QrCode::size(400)->generate($id);
+                return view('app.page.qrcode', compact('qrCode', 'id'));
+            }
+            return 'Data Tidak Ditemukan';
+        } catch (DecryptException $e) {
+            return 'Data Tidak Ditemukan';
         }
-        return 'Data Tidak Ditemukan';
         
     }
 }
