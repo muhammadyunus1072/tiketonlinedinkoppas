@@ -3,6 +3,7 @@
 namespace App\Imports;
 
 use App\Models\PesertaCareerFest;
+use Illuminate\Support\Facades\Log;
 use Maatwebsite\Excel\Concerns\ToModel;
 
 class PesertaCareerFestImport implements ToModel
@@ -14,6 +15,7 @@ class PesertaCareerFestImport implements ToModel
     */
     public function model(array $row)
     {
+        Log::info($row[0]);
         return new PesertaCareerFest([
             'timestamp' => $row[0],
             'username' => $row[1],
