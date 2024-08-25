@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('peserta_career_fests', function (Blueprint $table) {
             $table->id();
-            $table->date('timestamp')->nullable();
+            $table->string('timestamp')->nullable();
             $table->string('username')->nullable();
             $table->string('name')->nullable();
             $table->string('no_wa')->nullable();
