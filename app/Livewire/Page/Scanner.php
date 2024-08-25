@@ -28,7 +28,7 @@ class Scanner extends Component
 
                 PesertaCareerFestRepository::update($user->id, $validateData);
 
-                Alert::success($this, 'Berhasil', "Selamat Datang $user->name, No ID $user->no_ktp");
+                Alert::success($this, 'Berhasil', "Selamat Datang $user->name, Asal Sekolah $user->asal_sekolah");
             }else if($user && $user->status == PesertaCareerFest::STATUS_SCANNED){
                 Alert::fail($this, 'Gagal', 'Data Sudah Scan');
             }
