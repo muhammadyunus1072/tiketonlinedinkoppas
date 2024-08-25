@@ -68,20 +68,20 @@ class Datatable extends Component
     {
         $columns = [
             [
-                'key' => 'no_ktp',
-                'name' => 'No Identitas',
+                'key' => 'username',
+                'name' => 'Username',
             ],
             [
                 'key' => 'name',
                 'name' => 'Nama',
             ],
             [
-                'key' => 'email',
-                'name' => 'Email',
+                'key' => 'no_wa',
+                'name' => 'Nomor WA',
             ],
             [
-                'key' => 'no_telp',
-                'name' => 'Nomor Telp',
+                'key' => 'asal_sekolah',
+                'name' => 'Asal Sekolah',
             ],
             [
                 'key' => 'status',
@@ -98,10 +98,6 @@ class Datatable extends Component
                 'render' => function($item){
                     return ($item->scanned_at) ? Carbon::parse($item->scanned_at)->format('d F Y H:i:s') : "-";
                 }
-            ],
-            [
-                'key' => 'alamat',
-                'name' => 'alamat',
             ],
             [
                 'name' => 'Action',
