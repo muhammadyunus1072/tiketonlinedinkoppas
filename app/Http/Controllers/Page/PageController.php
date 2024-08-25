@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Page;
 use Illuminate\Http\Request;
 use App\Models\ConcertParticipant;
 use App\Http\Controllers\Controller;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Crypt;
+use App\Imports\PesertaCareerFestImport;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Illuminate\Contracts\Encryption\DecryptException;
 use App\Repositories\Page\ConcertParticipantRepository;
@@ -14,6 +16,8 @@ class PageController extends Controller
 {
     public function index()
     {
+        Excel::import(new PesertaCareerFestImport, public_path('data.xlsx'));
+
         return view('app.page.index');
     }
 
