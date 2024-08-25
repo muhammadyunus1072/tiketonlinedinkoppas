@@ -8,11 +8,11 @@ use Livewire\Component;
 use Livewire\Attributes\On;
 use App\Traits\WithDatatable;
 use App\Helpers\PermissionHelper;
-use App\Models\ConcertParticipant;
+use App\Models\PesertaCareerFest;
 use Illuminate\Database\Eloquent\Builder;
 use App\Repositories\Account\UserRepository;
 use App\Repositories\Course\CategoryRepository;
-use App\Repositories\Page\ConcertParticipantRepository;
+use App\Repositories\Page\PesertaCareerFestRepository;
 
 class Datatable extends Component
 {
@@ -38,7 +38,7 @@ class Datatable extends Component
             return;
         }
 
-        ConcertParticipantRepository::delete($this->targetDeleteId);
+        PesertaCareerFestRepository::delete($this->targetDeleteId);
         Alert::success($this, 'Berhasil', 'Data berhasil dihapus');
     }
 
@@ -87,7 +87,7 @@ class Datatable extends Component
                 'key' => 'status',
                 'name' => 'Status',
                 'render' => function($item){
-                    $class = $item->status == ConcertParticipant::STATUS_SCANNED ? 'success' : 'info';
+                    $class = $item->status == PesertaCareerFest::STATUS_SCANNED ? 'success' : 'info';
                     
                     return "<div class='badge badge-$class' style='font-size:15px;'>$item->status</div>";
                 }
@@ -139,7 +139,7 @@ class Datatable extends Component
 
     public function getQuery(): Builder
     {
-        return ConcertParticipantRepository::datatable();
+        return PesertaCareerFestRepository::datatable();
     }
 
     public function getView(): string

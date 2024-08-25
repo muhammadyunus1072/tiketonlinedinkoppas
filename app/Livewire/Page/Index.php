@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Crypt;
 use App\Repositories\Account\RoleRepository;
 use App\Repositories\Account\PermissionRepository;
+use App\Repositories\Page\PesertaCareerFestRepository;
 use App\Repositories\Page\ConcertParticipantRepository;
 
 class Index extends Component
@@ -26,15 +27,14 @@ class Index extends Component
 
     public function store(){
         $this->validate([
-            'no_ktp' => 'required|min:6',
+            'no_ktp' => 'required',
         ],
         [
-            'no_ktp.required' => 'No KTP / Kartu Pelajar Harus Diisi',
-            'no_ktp.min' => 'No KTP / Kartu Pelajar Minimal 6 karakter',
+            'no_ktp.required' => 'Kata Kunci Harus Diisi',
             ]
         );
         try {
-            $user = ConcertParticipantRepository::findByNo($this->no_ktp);
+            $user = PesertaCareerFestRepository::findByNo($this->no_ktp);
             if($user){
                 return redirect()->route('generate', ['id' => Crypt::encrypt($user->id)]);
             }
