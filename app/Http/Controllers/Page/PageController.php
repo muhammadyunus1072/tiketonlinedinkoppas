@@ -46,9 +46,9 @@ class PageController extends Controller
         try {
             $decId = Crypt::decrypt($id);
             $user = PesertaCareerFestRepository::find($decId);
-            return $user;
             if($user && $user->status === PesertaCareerFest::STATUS_REGISTERED){
                 $qrCode = QrCode::size(400)->generate($id);
+                return $qrCode;
                 return view('app.page.qrcode', compact('qrCode', 'id'));
             }
             return 'Data Tidak Ditemukan';
