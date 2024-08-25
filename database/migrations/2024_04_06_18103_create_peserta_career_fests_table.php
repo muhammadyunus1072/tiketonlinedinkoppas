@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('username')->nullable();
             $table->string('name')->nullable();
             $table->string('no_wa')->nullable();
-            $table->string('asal_sekolah');
+            $table->string('asal_sekolah')->nullable();
             $table->string('status')->default('registered');
             $table->dateTime('scanned_at')->nullable()->default(null);
             $table->softDeletes();
