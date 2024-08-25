@@ -4,7 +4,6 @@ namespace App\Imports;
 
 use Carbon\Carbon;
 use App\Models\PesertaCareerFest;
-use Illuminate\Support\Facades\Log;
 use Maatwebsite\Excel\Concerns\ToModel;
 
 class PesertaCareerFestImport implements ToModel
@@ -16,7 +15,6 @@ class PesertaCareerFestImport implements ToModel
     */
     public function model(array $row)
     {
-        Log::info($row[0]);
         return new PesertaCareerFest([
             'timestamp' => Carbon::createFromFormat('Y/m/d g:i:s A T', $row[0])->format('Y-m-d H:i:s'),
             'username' => $row[1],

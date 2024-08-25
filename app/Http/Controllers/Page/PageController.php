@@ -14,9 +14,9 @@ use App\Repositories\Page\ConcertParticipantRepository;
 
 class PageController extends Controller
 {
+    // Excel::import(new PesertaCareerFestImport, public_path('data.xlsx'));
     public function index()
     {
-        Excel::import(new PesertaCareerFestImport, public_path('data.xlsx'));
 
         return view('app.page.index');
     }
