@@ -7,11 +7,11 @@ use Carbon\Carbon;
 use App\Helpers\Alert;
 use Livewire\Component;
 use Livewire\Attributes\On;
-use App\Models\ConcertParticipant;
+use App\Models\PesertaCareerFest;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Contracts\Encryption\DecryptException;
-use App\Repositories\Page\ConcertParticipantRepository;
+use App\Repositories\Page\PesertaCareerFestRepository;
 
 class Scanner extends Component
 {
@@ -19,17 +19,17 @@ class Scanner extends Component
     public function scanned($data){
         try {
             $id = Crypt::decrypt($data);
-            $user = ConcertParticipantRepository::find($id);
-            if($user && $user->status == ConcertParticipant::STATUS_REGISTERED){
+            $user = PesertaCareerFestRepository::find($id);
+            if($user && $user->status == PesertaCareerFest::STATUS_REGISTERED){
                 $validateData = [
-                    'status' => ConcertParticipant::STATUS_SCANNED,
+                    'status' => PesertaCareerFest::STATUS_SCANNED,
                     'scanned_at' => Carbon::now(),
                 ];
 
-                ConcertParticipantRepository::update($user->id, $validateData);
+                PesertaCareerFestRepository::update($user->id, $validateData);
 
                 Alert::success($this, 'Berhasil', "Selamat Datang $user->name, No ID $user->no_ktp");
-            }else if($user && $user->status == ConcertParticipant::STATUS_SCANNED){
+            }else if($user && $user->status == PesertaCareerFest::STATUS_SCANNED){
                 Alert::fail($this, 'Gagal', 'Data Sudah Scan');
             }
             else{
