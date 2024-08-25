@@ -3,14 +3,14 @@
 namespace App\Http\Controllers\Page;
 
 use Illuminate\Http\Request;
-use App\Models\ConcertParticipant;
+use App\Models\PesertaCareerFest;
 use App\Http\Controllers\Controller;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Crypt;
 use App\Imports\PesertaCareerFestImport;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Illuminate\Contracts\Encryption\DecryptException;
-use App\Repositories\Page\ConcertParticipantRepository;
+use App\Repositories\Page\PesertaCareerFestRepository;
 
 class PageController extends Controller
 {
@@ -45,8 +45,8 @@ class PageController extends Controller
     {
         try {
             $decId = Crypt::decrypt($id);
-            $user = ConcertParticipantRepository::find($decId);
-            if($user && $user->status === ConcertParticipant::STATUS_REGISTERED){
+            $user = PesertaCareerFestRepository::find($decId);
+            if($user && $user->status === PesertaCareerFest::STATUS_REGISTERED){
                 $qrCode = QrCode::size(400)->generate($id);
                 return view('app.page.qrcode', compact('qrCode', 'id'));
             }
