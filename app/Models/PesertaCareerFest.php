@@ -11,7 +11,7 @@ class PesertaCareerFest extends Model
 {
     use HasFactory, SoftDeletes;
 
-    const STATUS_REGISTERED = "registered";
+    const STATUS_REGISTERED = "REGISTERED";
     const STATUS_SCANNED = "SCANNED";
 
     const MAX = 2500;

@@ -17,8 +17,6 @@ class PageController extends Controller
     // Excel::import(new PesertaCareerFestImport, public_path('data.xlsx'));
     public function index()
     {
-        PesertaCareerFest::query()->update(['status' => 'REGISTERED']);
-
         return view('app.page.index');
     }
 

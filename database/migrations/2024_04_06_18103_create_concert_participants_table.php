@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('no_ktp')->unique();
             $table->string('no_telp');
             $table->string('alamat');
-            $table->string('status')->default('registered');
+            $table->string('status')->default('REGISTERED');
             $table->dateTime('scanned_at')->nullable()->default(null);
             $table->softDeletes();
             $table->timestamps();
