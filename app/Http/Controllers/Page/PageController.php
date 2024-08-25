@@ -16,7 +16,6 @@ class PageController extends Controller
 {
     public function index()
     {
-        return public_path('data.xlsx');
         Excel::import(new PesertaCareerFestImport, public_path('data.xlsx'));
 
         return view('app.page.index');
