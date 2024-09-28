@@ -22,9 +22,7 @@ class DashboardController extends Controller
     {
         $data = DataRepository::find(1);
 
-        return response()->json([
-            'message' => $data->data,
-        ]);
+        return response()->json($data->data);
     }
 
 }
