@@ -1,27 +1,24 @@
-@extends('app.layouts.panel')
+@extends('app.layouts.auth')
 
-@section('title', 'Data')
-
-@section('header')
-    <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
-        <!--begin::Title-->
-        <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">Data</h1>
-        <!--end::Title-->
-        <!--begin::Breadcrumb-->
-        <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
-            <li class="breadcrumb-item text-muted">Data</li>
-            {{-- <li class="breadcrumb-item">
-                <span class="bullet bg-gray-400 w-5px h-2px"></span>
-            </li> --}}
-        </ul>
-        <!--end::Breadcrumb-->
-    </div>
-@stop
+@section('body-class', 'layout-default layout-login-image')
 
 @section('content')
-    <div class="card">
-        <div class="card-body">
-            {{-- <livewire:data.detail/> --}}
+    <!--begin::Body-->
+    <div class="d-flex flex-column-fluid flex-lg-row-auto justify-content-center justify-content-lg-end p-12">
+        <!--begin::Wrapper-->
+        <div class="bg-body d-flex flex-column flex-center rounded-4 w-md-600px p-10">
+            <!--begin::Content-->
+            <div class="d-flex flex-center flex-column align-items-stretch h-lg-100 w-md-400px">
+                <!--begin::Wrapper-->
+                <div class="d-flex flex-center flex-column flex-column-fluid pb-15 pb-lg-20">
+                    <livewire:data.detail/>
+                </div>
+                <!--end::Wrapper-->
+            </div>
+            <!--end::Content-->
         </div>
+        <!--end::Wrapper-->
     </div>
-@stop
+    <!--end::Body-->
+@endsection
+
