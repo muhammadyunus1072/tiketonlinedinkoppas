@@ -21,7 +21,7 @@
 @section('content')
     <div class="card">
         <div class="card-body">
-            <livewire:data.detail/>
+            {{-- <livewire:data.detail/> --}}
         </div>
     </div>
 @stop
