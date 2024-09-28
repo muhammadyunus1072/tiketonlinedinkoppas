@@ -15,6 +15,7 @@ class DashboardController extends Controller
 
     public function setData()
     {
+        return "OKE";
         return view('app.data.index');
     }
 
