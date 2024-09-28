@@ -3,8 +3,9 @@
     <!--begin::Input group=-->
     <div class="fv-row mb-8">
         <!--begin::Email-->
-        <input type="text" placeholder="Data" wire:model="data" autocomplete="off"
-            class="form-control bg-transparent @error('data') is-invalid @enderror" />
+        <textarea class="form-control @error('data') is-invalid @enderror" cols="30" rows="4" wire:model="data">
+
+        </textarea>
         @error('data')
             <div class="invalid-feedback">
                 {{ $message }}
