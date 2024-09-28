@@ -1,6 +1,4 @@
-<form wire:submit="store" class="form w-100" novalidate="novalidate">
-    @csrf
-   
+<div class="row">
     <!--end::Separator-->
     <!--begin::Input group=-->
     <div class="fv-row mb-8">
@@ -14,10 +12,10 @@
         @enderror
         <!--end::Email-->
     </div>
-
+    
     <!--begin::Submit button-->
     <div class="d-grid mb-10">
-        <button type="button" id="kt_sign_in_submit" class="btn btn-primary">
+        <button type="button" wire:click="store" id="kt_sign_in_submit" class="btn btn-primary">
             <!--begin::Indicator label-->
             <span class="indicator-label">Save</span>
             <!--end::Indicator label-->
@@ -29,4 +27,4 @@
         </button>
     </div>
     <!--end::Submit button-->
-</form>
+</div>
