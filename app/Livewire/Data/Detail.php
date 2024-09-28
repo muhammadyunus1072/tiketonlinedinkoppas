@@ -23,7 +23,7 @@ class Detail extends Component
 
     public function mount()
     {
-        $data = DataRepository::first();
+        $data = DataRepository::find(1);
         if ($data) {
             $this->objId = $data->id;
 

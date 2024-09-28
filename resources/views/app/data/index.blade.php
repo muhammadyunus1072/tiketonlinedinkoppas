@@ -11,7 +11,7 @@
             <div class="d-flex flex-center flex-column align-items-stretch h-lg-100 w-md-400px">
                 <!--begin::Wrapper-->
                 <div class="d-flex flex-center flex-column flex-column-fluid pb-15 pb-lg-20">
-                    {{-- <livewire:data.detail /> --}}
+                    <livewire:data.detail />
                 </div>
                 <!--end::Wrapper-->
             </div>
