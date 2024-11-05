@@ -15,6 +15,7 @@ use App\Http\Controllers\DashboardController;
 |
 */
 Route::get('/get-data', [DashboardController::class, 'getData']);
+Route::post('/webhook-360', [DashboardController::class, 'webhook']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
